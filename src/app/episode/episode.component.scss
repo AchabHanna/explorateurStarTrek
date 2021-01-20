@@ -1,0 +1,29 @@
+.logoImg {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  outline: none;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .cardContainer {
+    width: 30vw;
+    height: 20vh;
+    padding: 10%;
+
+    .title {
+      color: #6d6d6d;
+    }
+
+    .seasonContainer {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+}

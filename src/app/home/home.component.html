@@ -1,0 +1,31 @@
+<!-- 
+Formation angular: 2jours
+Développement: 1jour 1/2
+Fix bug: 1/2 jour
+ -->
+
+<h1 class="title">explorateur star trek</h1>
+<div class="cardContainer">
+  <mat-card class="card" *ngFor="let propertiesEpisode of propertiesEpisodes">
+    <mat-card-title class="cardTitle">{{
+      propertiesEpisode.title
+    }}</mat-card-title>
+    <mat-card-subtitle>{{ propertiesEpisode.uid }}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ propertiesEpisode.series.title }}</p>
+      <div class="episode">
+        <p>{{ propertiesEpisode.season.title }}</p>
+        <p>Episode {{ propertiesEpisode.episodeNumber }}</p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button
+        class="btn"
+        mat-stroked-button
+        [routerLink]="['/', 'episode', propertiesEpisode.uid]"
+      >
+        En savoir plus
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,23 @@
+.title {
+  color: #6d6d6d;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-flow: row wrap;
+
+  mat-card {
+    width: 400px;
+    margin: 20px;
+  }
+
+  .episode {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

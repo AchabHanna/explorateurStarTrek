@@ -1,0 +1,24 @@
+<img
+  class="logoImg"
+  src="https://ucarecdn.com/e395d8a3-51c7-42cf-9758-8457259f1507/logo.png"
+  alt="logo flidesk"
+  routerLink=""
+/>
+<div class="container">
+  <mat-card class="cardContainer" *ngFor="let episode of episodes">
+    <mat-card-title class="cardTitle">{{ episode["title"] }}</mat-card-title>
+    <h1 class="title">{{ episode["season"]["series"]["title"] }}</h1>
+    <mat-card-subtitle>{{ episode["uid"] }}</mat-card-subtitle>
+    <mat-card-content>
+      <div class="seasonContainer">
+        <p>Episode {{ episode["season"]["numberOfEpisodes"] }}</p>
+        <p>Saison {{ episode["seasonNumber"] }}</p>
+      </div>
+      <p>Nombre de personnage: {{ episode["performers"]["length"] }}</p>
+
+      <mat-card-actions align="end">
+        <button mat-stroked-button class="btn" routerLink="">Retour</button>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</div>
